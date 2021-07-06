@@ -1,0 +1,288 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!-- Mobile Specific Metas  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css?v=0.02" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="./jcarousel_skin.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./preloader/css/preloader.css"  />
+    <link rel="stylesheet" type="text/css" href="./prettyPhoto/css/prettyPhoto.css" />
+    <link rel="stylesheet" type="text/css" href="./css/menusm.css" />
+    <link href="./ui_totop/css/ui.totop.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./css/layout.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Six+Caps' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-inner"> <a class="brand" href="index.html">OpenIL</a>
+                    <div class="menu">
+                        <script type="text/javascript" src="./js/menu_html_block.js?v=0.02"></script>
+                    </div>
+                </div>
+            </div>
+            <!--navbar-->
+        </div>
+    </div>
+    <!-- #header-->
+    <div class="clr"></div>
+    <div id="content">
+        <div class="container" id="gallery" style="background:none;">
+            <div class="row">
+                <div class="separator"></div>
+                <h1 class="text-center extrabold">News -OpenIL v1.0 release</h1>
+                <div class="separator"></div>
+            </div>
+            <div class="content_page">
+                <div class="row">
+                    <div class="span12">
+                        <!--<h1><span style="text-transform:none">Our news - Top Five IoT Challenges</span></h1>-->
+                        <div class="blogpost">
+                            <div class="content_full_size">
+                                <div class="post_detail">2018-01-18, Author: <a href="#">Gang Liu</a>,
+                                    <!--<a href="#"> 3 Comments</a>-->
+                                </div>
+                            </div>
+                            <!--<div class="pic"><img src="./stockPhoto/industrial-iot.jpg"/>
+                            </div>-->
+                            <p>=== OpenIL v1.0 release (OpenIL-201712) site:<br><br>
+
+                                https://github.com/openil/openil/releases/tag/OpenIL-201712<br><br>
+
+                                === What’s New:
+                            <p style="margin-left: 50px;">
+                                1.	Align Kernel/U-Boot/NXP-packages to LSDK17.09 release<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;a.	U-Boot version: 201707<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;b.	Linux version: 4.9.35<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;c.	NXP-Packages: fmc, fmclib, fmucode, ppa, rcw, cst<br>
+                                2.	Upgrade Buildroot to 2017.02.6 LTS<br>
+                                3.	Secure OTA support<br>
+                                4.	DM Crypt support<br>
+                                5.	Transparent clock of LS1021ATSN board<br>
+                                6.	Custom filesystem skeleton support
+                            </p>
+
+                            === Platforms
+                            <p style="margin-left: 50px;">
+                                LS1012ARDB-32B<br>
+                                LS1012ARDB-64B<br>
+                                LS1021AIOT<br>
+                                LS1021ATSN<br>
+                                LS1043ARDB-32B<br>
+                                LS1043ARDB-64B<br>
+                                LS1046ARDB-32B<br>
+                                LS1046ARDB-64B
+                            </p>
+
+
+
+                            === Features
+                            <p style="margin-left: 50px;">
+                                NetConf/Yang<br>
+                                Netopeer<br>
+                                TSN<br>
+                                IEEE 1588<br>
+                                IEEE 1588 2-step E2E transparent clock<br>
+                                Secure OTA<br>
+                                Xenomai Cobalt<br>
+                                SJA1105 Qbv<br>
+                                SELinux<br>
+                                DM-Crypt<br>
+                                OP-TEE<br>
+                                4G LTE module<br>
+                                Custom filesystem skeleton
+                            </p>
+                            === Getting OpenIL<br>
+                            OpenIL release is made every few months. Release number follow the format YYYYMM, for example 201712.  the source code is available at:<br><br>
+                            <p style="margin-left: 50px;">	https://github.com/openil/openil</p><br>
+
+                            To follow development, you can make a clone of the code repository. Refer to the command:<br>
+                            $ git clone https://github.com/openil/openil.git<br>
+                            $ cd openil<br><br>
+
+                            1. OpenIL Quick Start<br>
+                            The steps below build the NXP platform images with OpenIL quickly. And you should NOT ignore the important notes in the following section.<br><br>
+                            #Important Notes<br>
+                            <p style="margin-left: 50px;">
+                                • Build everything as a normal user. There is no need to be root to configure and use OpenIL.<br>
+                                By running all commands as a regular user, you protect your system against packages behaving badly during compile and installation.<br>
+                                • Not use make -jN  to build OpenIL: top-level parallel make is currently not supported.<br>
+                                • The PERL_MM_OPT issue. you may encounter the error information of the PERL_MM_OPT when run make command in some host
+                                Linux environment like this:<br><br>
+                            </p>
+                            <p style="margin-left: 80px;">
+                                You have PERL_MM_OPT defined because Perl local::lib<br>
+                                is installed on your system. Please unset this variable<br>
+                                before starting Buildroot, otherwise the compilation of<br>
+                                Perl related packages will fail<br>
+                                make[1]: *** [core-dependencies] Error 1<br>
+                                make: *** [_all] Error 2<br><br>
+                            </p>
+                            <p style="margin-left: 50px;">
+                                To resolve it, just unset the PERL_MM_OPT.<br><br>
+
+                                $ unset PERL_MM_OPT<br><br>
+                            </p>
+                            2. Building the Final Images<br>
+                            For the NXP platforms supported by OpenIL, The default configuration files can be found in directory “configs”.<br><br>
+                            For example:<br><br>
+
+                            Platform  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Config file in OpenIL<br>
+                            ls1021atsn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configs/nxp_ls1021atsn_defconfig<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;configs/nxp_ls1021atsn_optee_defconfig<br>
+                            ls1021aiot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configs/nxp_ls1021aiot_defconfig<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;configs/nxp_ls1021aiot_optee_defconfig<br>
+                            ls1043ardb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configs/nxp_ls1043ardb-32b_defconfig<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;configs/nxp_ls1043ardb-64b_defconfig<br>
+                            ls1046ardb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configs/nxp_ls1046ardb-32b_defconfig<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;configs/nxp_ls1046ardb-64b_defconfig<br>
+                            ls1012ardb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configs/nxp_ls1012ardb-32b_defconfig<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;configs/nxp_ls1012ardb-64b_defconfig<br><br>
+
+                            Those “configs/nxp_xxxx_defconfig” files include all the necessary U-Boot, Kernel configurations and application packages for filesystem.<br>
+                            Based on the files without any changes, you can build a complete Linux environment for the target platforms.<br>
+                            To build the final images for one NXP platform (i.e. ls1021atsn), simply run:<br><br>
+
+                            $ cd openil<br>
+                            $ make nxp_ls1021atsn_defconfig<br>
+                            $ make<br>
+                            # or make with a log<br>
+                            $ make 2>&1 | tee build.log<br><br>
+
+                            The “make” command will generally perform the following steps:<br>
+                            <p style="margin-left: 50px;">
+                                • Download source files (as required and just at the first time);<br>
+                                • Configure, build and install the cross-compilation toolchain;<br>
+                                • Configure, build and install selected target packages;<br>
+                                • Build a kernel image, if selected;<br>
+                                • Build a bootloader image, if selected;<br>
+                                • Create a root filesystem in selected formats.
+                            </p>
+
+                            After the correct compilation, you can find all the images for the platform at “output/images”.<br><br>
+
+                            output/images/<br>
+                            ├── boot.vfat<br>
+                            ├── ls1021a-tsn.dtb					---	dtb file for ls1021atsn<br>
+                            ├── rootfs.ext2<br>
+                            ├── rootfs.ext2.gz<br>
+                            ├── rootfs.ext2.gz.uboot			---	ramdisk can be used for debug<br>
+                            ├── rootfs.ext4.gz -> rootfs.ext2.gz<br>
+                            ├── rootfs.tar<br>
+                            ├── sdcard.img						---	entire image can be programmed into the SD card<br>
+                            ├── uboot-env.bin<br>
+                            ├── u-boot-with-spl-pbl.bin			---	uboot image for ls1021atsn<br>
+                            └── uImage							---	kernel image for ls1021atsn<br>
+                            <br>
+                            <br>
+                            3. More information support<br>
+                            <h3 class="detail"><a href="/files/Open_Industrial_Linux_User_Guide.pdf">&nbsp;&nbsp;&nbsp;&nbsp;Read More</a></h3>
+
+                        </div>
+
+                        <div class="separator"></div>
+
+                        <div class="clr"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clr separator"></div>
+</div>
+<!-- /content -->
+</div>
+<!-- #wrapper -->
+
+<div id="footer">
+    <div class="container">
+        <div class="cols">
+            <div class="row">
+                <div class="span4 offset2">
+                    <h4>Stay Connected</h4>
+                </div>
+                <!--<div class="span4">-->
+                <!-- <h4>Subscribe to our Newsletter</h4>
+                <p>Sign up to receive email notifications of news and events from OpenIl.org.</p>
+                <form id="subscribe" name="subscribe" action="#" method="post" class="validate" target="_blank">
+                  <div class="input-append">
+                    <input type="email" id="email" name="email" placeholder="Your Email">
+                    <button class="subscribe-button btn" type="submit">SUBSCRIBE</button>
+                  </div>
+                </form>
+                <div class="social">
+                  <h4>follow us</h4>
+                  <a class="soc1" href="#"></a> <a class="soc2" href="#"></a> <a class="soc3" href="#"></a> <a class="soc4" href="#"></a> <a class="soc5" href="#"></a> <a class="soc6" href="#"></a> <a class="soc7" href="#"></a> <a class="soc8" href="#"></a> <a class="soc9" href="#"></a> </div>
+                <div class="clr"></div> -->
+                <!--</div> -->
+                <div class="span4">
+                    <div class="lastcol">
+                        <h4>Key Technologies</h4>
+                        <span class="label">Linux</span>
+                        <span class="label label-success">TSN</span>
+                        <span class="label label-warning">IEEE 1588</span>
+                        <span class="label label-important">Security</span>
+                        <span class="label label-info">Xenomai</span>
+                        <span class="label label-inverse">IoT</span>
+                        <span class="label">Industrial</span>
+                        <span class="label label-success">Real-Time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container cols -->
+    <script type="text/javascript" src="./js/utilities.js"></script>
+    <script type="text/javascript">display_copyright()</script>
+</div>
+<!-- #footer -->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="./js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+    function mycarousel_initCallback(carousel)
+    {
+        // Disable autoscrolling if the user clicks the prev or next button.
+        carousel.buttonNext.bind('click', function() {carousel.startAuto(0);});
+        carousel.buttonPrev.bind('click', function() {carousel.startAuto(0);});
+        // Pause autoscrolling if the user moves with the cursor over the clip.
+        carousel.clip.hover(function() {carousel.stopAuto();}, function() {carousel.startAuto();});
+    };
+
+    jQuery(document).ready(function() {
+        jQuery('#gallery-carousel').jcarousel({
+            auto: 2,
+            wrap: 'circular',
+            scroll: 1,
+            initCallback: mycarousel_initCallback
+        });
+    });
+</script>
+<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./prettyPhoto/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="./js/menusm.js"></script>
+<script type="text/javascript" src="./ui_totop/js/jquery.ui.totop.js"></script>
+<script type="text/javascript" src="./js/scripts.js"></script>
+<script type="text/javascript" src="./preloader/js/jquery.preloader.js"></script>
+<script type="text/javascript" src="./js/tinynav.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#nav').tinyNav({
+            active: 'selected',
+            header: 'Navigation'
+        });
+    });
+</script>
+</body>
+</html>

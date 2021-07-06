@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <!-- Mobile Specific Metas  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css?v=0.02" media="screen, projection"/>
+    <link rel="stylesheet" type="text/css" href="jcarousel_skin.css">
+    <link rel="stylesheet" type="text/css" href="preloader/css/preloader.css"/>
+    <link rel="stylesheet" type="text/css" href="prettyPhoto/css/prettyPhoto.css"/>
+    <link rel="stylesheet" type="text/css" href="css/menusm.css"/>
+    <link rel="stylesheet" type="text/css" href="ui_totop/css/ui.totop.css"/>
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Six+Caps' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-inner"><a class="brand" href="index.html">OpenIL</a>
+                    <div class="menu">
+                        <script type="text/javascript" src="js/menu_html_block.js?v=0.02"></script>
+                    </div>
+                </div>
+            </div>
+            <!--navbar-->
+        </div>
+    </div>
+
+    <!-- #header-->
+    <div class="clr"></div>
+    <div id="content" class="nogap container">
+        <div class="row custom-content" id="develop-contents">
+            <div class="span12">
+                <h2>Development</h2>
+                <p>Anyone is welcome to contribute.</p>
+                <!--
+                <h3>Licenses</h3>
+                <p>??</p>
+                -->
+                <h3>Get Source code</h3>
+                <a href="https://github.com/openil/openil" target="_blank">OpenIL</a>
+                <p> OpenIL is an open source project designed for embedded industrial solutions.</p>
+                <a href="https://github.com/openil/linux" target="_blank">Linux</a>
+                <p>linux source code for openil</p>
+                <a href="https://github.com/openil/u-boot" target="_blank">u-boot</a>
+                <p>U-Boot source code for openil</p>
+                <a href="https://github.com/openil/linuxptp" target="_blank">linuxptp</a>
+                <p>PTP IEEE 1588 stack for Linux</p>
+                <a href="https://github.com/openil/sja1105-tool" target="_blank">sja1105-tool</a>
+                <p>The sja1105-tool is a Linux userspace application for configuring the NXP SJA1105 Automotive Ethernet L2 switch.</p>
+                <h3>Code Style</h3>
+                <p>Please follow the <a href="code_style.html" target="_blank">code style</a> to write kernel.</p>
+            </div>
+        </div>
+        <!-- #content-->
+
+    </div>
+    <!-- #wrapper -->
+
+    <div id="footer">
+        <div class="container">
+            <div class="cols">
+                <div class="row">
+                    <div class="span4 offset2">
+                        <h4>Stay Connected</h4>
+                    </div>
+                    <!--<div class="span4">-->
+                        <!-- <h4>Subscribe to our Newsletter</h4>
+                        <p>Sign up to receive email notifications of news and events from OpenIl.org.</p>
+                        <form id="subscribe" name="subscribe" action="#" method="post" class="validate" target="_blank">
+                            <div class="input-append">
+                                <input type="email" id="email" name="email" placeholder="Your Email">
+                                <button class="subscribe-button btn" type="submit">SUBSCRIBE</button>
+                            </div>
+                        </form>
+                        <div class="social">
+                            <h4>follow us</h4>
+                            <a class="soc1" href="#"></a> <a class="soc2" href="#"></a> <a class="soc3" href="#"></a> <a
+                                class="soc4" href="#"></a> <a class="soc5" href="#"></a> <a class="soc6" href="#"></a> <a
+                                class="soc7" href="#"></a> <a class="soc8" href="#"></a> <a class="soc9" href="#"></a></div>
+                        <div class="clr"></div> -->
+                    <!--</div>-->
+                    <div class="span4">
+                        <div class="lastcol">
+                            <h4>Key Technologies</h4>
+                            <span class="label">Linux</span>
+                            <span class="label label-success">TSN</span>
+                            <span class="label label-warning">IEEE 1588</span>
+                            <span class="label label-important">Security</span>
+                            <span class="label label-info">Xenomai</span>
+                            <span class="label label-inverse">IoT</span>
+                            <span class="label">Industrial</span>
+                            <span class="label label-success">Real-Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- container cols -->
+        <script type="text/javascript" src="js/utilities.js"></script>
+        <script type="text/javascript">display_copyright()</script>
+    </div>
+    <!-- #footer -->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+        function mycarousel_initCallback(carousel) {
+            // Disable autoscrolling if the user clicks the prev or next button.
+            carousel.buttonNext.bind('click', function () {
+                carousel.startAuto(0);
+            });
+            carousel.buttonPrev.bind('click', function () {
+                carousel.startAuto(0);
+            });
+            // Pause autoscrolling if the user moves with the cursor over the clip.
+            carousel.clip.hover(function () {
+                carousel.stopAuto();
+            }, function () {
+                carousel.startAuto();
+            });
+        };
+
+        jQuery(document).ready(function () {
+            jQuery('#gallery-carousel').jcarousel({
+                auto: 2,
+                wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });
+        });
+    </script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="prettyPhoto/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/menusm.js?v=0.0.1"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="ui_totop/js/jquery.ui.totop.js" charset="utf-8"></script>
+    <script type="text/javascript" src="preloader/js/jquery.preloader.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/tinynav.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#nav').tinyNav({
+                active: 'selected',
+                header: 'Navigation'
+            });
+
+        });
+    </script>
+</body>
+</html>

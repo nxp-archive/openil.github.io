@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <!-- Mobile Specific Metas  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen, projection"/>
+    <link rel="stylesheet" type="text/css" href="../../jcarousel_skin.css">
+    <link rel="stylesheet" type="text/css" href="../../preloader/css/preloader.css"/>
+    <link rel="stylesheet" type="text/css" href="../../prettyPhoto/css/prettyPhoto.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/menusm.css"/>
+    <link rel="stylesheet" type="text/css" href="../../ui_totop/css/ui.totop.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/layout.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Six+Caps' rel='stylesheet' type='text/css'>
+    <style>
+        iframe body{font-size:14px;}
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="navbar navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-inner"><a class="brand" href="/openil/index.html">OpenIL</a>
+                        <div class="menu">
+                            <script type="text/javascript" src="../../js/menu_html_block.js?v=0.02"></script>
+                        </div>
+                    </div>
+                </div>
+                <!--navbar-->
+            </div>
+        </div>
+
+        <!-- #header-->
+        <div class="clr"></div>
+        <div id="content" class="nogap container">
+            <div class="row">
+                <div class="separator"></div>
+                <h1 class="text-center extrabold">users -- OPENIL usage list</h1>
+                <h2 class="sub-title" style="background: rgb(255, 240, 208);padding: 0 10px;font-weight:bold;">The users Archives</h2>
+                <div class="row custom-content" id="mailing-lists">
+                    <div class="span12">
+                        <table class="table">
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #content-->
+
+    </div>
+    <!-- #wrapper -->
+
+    <div id="footer">
+        <div class="container">
+            <div class="cols">
+                <div class="row">
+                    <div class="span4 offset2">
+                        <h4>Stay Connected</h4>
+                        <div class="post"><span>""</span>
+                            <p> <a href="mailto:""">""</a><br />
+                            </p>
+                            <br/>
+                        </div>
+                    </div>
+                    <!--<div class="span4">-->
+                        <!-- <h4>Subscribe to our Newsletter</h4>
+                        <p>Sign up to receive email notifications of news and events from OpenIl.org.</p>
+                        <form id="subscribe" name="subscribe" action="#" method="post" class="validate" target="_blank">
+                            <div class="input-append">
+                                <input type="email" id="email" name="email" placeholder="Your Email">
+                                <button class="subscribe-button btn" type="submit">SUBSCRIBE</button>
+                            </div>
+                        </form>
+                        <div class="social">
+                            <h4>follow us</h4>
+                            <a class="soc1" href="#"></a> <a class="soc2" href="#"></a> <a class="soc3" href="#"></a> <a
+                                class="soc4" href="#"></a> <a class="soc5" href="#"></a> <a class="soc6" href="#"></a> <a
+                                class="soc7" href="#"></a> <a class="soc8" href="#"></a> <a class="soc9" href="#"></a></div>
+                        <div class="clr"></div> -->
+                    <!--</div>-->
+                    <div class="span4">
+                        <div class="lastcol">
+                            <h4>Key Technologies</h4>
+                            <span class="label">Linux</span>
+                            <span class="label label-success">TSN</span>
+                            <span class="label label-warning">IEEE 1588</span>
+                            <span class="label label-important">Security</span>
+                            <span class="label label-info">Xenomai</span>
+                            <span class="label label-inverse">IoT</span>
+                            <span class="label">Industrial</span>
+                            <span class="label label-success">Real-Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- container cols -->
+        <div class="copyright">&copy; 2017 Copyright <b>openil.org</b>. All Rights Reserved.</div>
+    </div>
+    <!-- #footer -->
+
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../prettyPhoto/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="../../js/menusm.js?v=0.01"></script>
+    <script type="text/javascript" src="../../js/scripts.js"></script>
+    <script type="text/javascript" src="../../ui_totop/js/jquery.ui.totop.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../preloader/js/jquery.preloader.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/tinynav.min.js"></script>
+    <script type="text/javascript">
+    var aws_get_mailing_list_url="https://wvpkul46d8.execute-api.us-west-2.amazonaws.com/prod/mailing-lists-user";
+    //get url params
+    (function ($) {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        };
+    })(jQuery);
+    var mailingList = $.getUrlParam('mailingList');
+    $.ajax({
+        type: "GET",
+        url: aws_get_mailing_list_url,
+        crossDomain:true,
+        dataType: "json",
+        success: function (json) {
+            console.log(json);
+            for(var emailL in json){
+                if(emailL==mailingList){
+                    console.log(json[emailL]);
+                    var emailListUser=json[emailL]
+                    for(var email in emailListUser) {
+                        $('#mailing-lists tbody').append("<tr >" +
+                            "<th><a href='mailto:" + emailListUser[email] + "' style='padding-left: 2em;color:#000;'>" + emailListUser[email] + "</a></th>" +
+                            "</tr>");
+                    }
+                }
+            }
+        },
+        error: function (data, status, error) {
+            console.log(data);
+            console.log('fail');
+        }
+    });
+
+
+
+
+
+</script>
+</body>
+</html>

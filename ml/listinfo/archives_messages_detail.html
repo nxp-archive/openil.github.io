@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <!-- Mobile Specific Metas  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../style.css" media="screen, projection" />
+    <link rel="stylesheet" type="text/css" href="../../jcarousel_skin.css">
+    <link rel="stylesheet" type="text/css" href="../../preloader/css/preloader.css" />
+    <link rel="stylesheet" type="text/css" href="../../prettyPhoto/css/prettyPhoto.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/menusm.css" />
+    <link rel="stylesheet" type="text/css" href="../../ui_totop/css/ui.totop.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/layout.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300&subset=latin,cyrillic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Six+Caps' rel='stylesheet' type='text/css'>
+    <style>
+        iframe body {
+            font-size: 14px;
+        }
+
+        a {
+            color: #ef4e22;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="navbar navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-inner"><a class="brand" href="/openil/index.html">OpenIL</a>
+                        <div class="menu">
+                            <script type="text/javascript" src="../../js/menu_html_block.js?v=0.02"></script>
+                        </div>
+                    </div>
+                </div>
+                <!--navbar-->
+            </div>
+        </div>
+
+        <!-- #header-->
+        <div class="clr"></div>
+        <div id="content" class="nogap container">
+            <div class="row">
+                <div class="separator"></div>
+                <h1 class="text-center extrabold" id="title"></h1>
+                <h2 class="sub-title" id="thread_topic" style="background: rgb(255, 240, 208);padding: 0 10px;font-weight:bold;">The users Archives</h2>
+                <div class="row custom-content">
+                    <p id="author" class="span12"></p>
+                    <p id="date" class="span12"></p>
+                    <b id="prev_next_messages" class="span12"></b>
+                    <br>
+                    <b id="messages_sorted_by" class="span12">Messages sorted by: [ subject ] [ author ] [ date ]</b>
+                    <b id="result_error" class="span12"></b>
+                    <div class="span12">
+                        <pre id="message_context"></pre>
+                    </div>
+                    <b id="prev_next_messages_down" class="span12"></b>
+                </div>
+            </div>
+        </div>
+        <!-- #content-->
+
+    </div>
+    <!-- #wrapper -->
+
+    <div id="footer">
+        <div class="container">
+            <div class="cols">
+                <div class="row">
+                    <div class="span4 offset2">
+                        <h4>Stay Connected</h4>
+                        <div class="post"><span>""</span>
+                            <p> <a href="mailto:""">""</a><br />
+                            </p>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="lastcol">
+                            <h4>Key Technologies</h4>
+                            <span class="label">Linux</span>
+                            <span class="label label-success">TSN</span>
+                            <span class="label label-warning">IEEE 1588</span>
+                            <span class="label label-important">Security</span>
+                            <span class="label label-info">Xenomai</span>
+                            <span class="label label-inverse">IoT</span>
+                            <span class="label">Industrial</span>
+                            <span class="label label-success">Real-Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- container cols -->
+        <script type="text/javascript" src="../../js/utilities.js"></script>
+        <script type="text/javascript">display_copyright()</script>
+    </div>
+    <!-- #footer -->
+
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../prettyPhoto/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="../../js/menusm.js?v=0.01"></script>
+    <script type="text/javascript" src="../../js/scripts.js"></script>
+    <script type="text/javascript" src="../../ui_totop/js/jquery.ui.totop.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../preloader/js/jquery.preloader.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/tinynav.min.js"></script>
+    <script type="text/javascript">
+        // var aws_get_mailing_list_url="https://wvpkul46d8.execute-api.us-west-2.amazonaws.com/prod/mailing-lists-user";
+        //get url params
+        (function ($) {
+            $.getUrlParam = function (name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]); return null;
+            };
+        })(jQuery);
+        var message_id = $.getUrlParam('id');
+        var sortby = $.getUrlParam('sortby');
+        mailingList = 'test@openil.org'
+        // $('#title').text('The users Archives by ' + sortby)
+        mailingList = 'test@openil.org'
+        var url = "https://wvpkul46d8.execute-api.us-west-2.amazonaws.com/api/messages/" + message_id
+
+        console.log(url)
+
+        $.ajax({
+            type: "GET",
+            url: url,
+            crossDomain: true,
+            dataType: "json",
+            success: function (res) {
+                console.log(res);
+                if (res == 'undefined') {
+                    $("#result_error").html('Error:' + res)
+                } else {
+                    if (res.Code === 0) {
+                        var result = res.Result
+                        var sender = result.sender.replace('<', '&lt;\t')
+                        $("#author").html(sender)
+                        $("#date").html(result.date + ' +0000')
+                        $("#message_context").html(result.message_context)
+                        $("#thread_topic").html('[' + result.recipient + '] ' + result.subject)
+                        var msg_sortby_html = get_msg_sortby_html( result.recipient, result.date)
+                        $("#messages_sorted_by").html(msg_sortby_html)
+
+                        var msg_prev_next_html = get_prev_next_msg_html(message_id, result.recipient, sortby, result.date)
+                        console.log(msg_prev_next_html)
+
+
+                    } else {
+                        $("#result_error").html('Error：<br/>' + res.Error)
+                    }
+                }
+            },
+            error: function (data, status, error) {
+                console.log(data);
+                console.log('fail');
+            }
+        });
+
+        function get_msg_sortby_html(mailingList, date) {
+            if(date != null){
+                d= date
+                t =new Date(d.substr(0, 4), d.substr(5, 2) - 1, d.substr(8, 2), d.substr(11, 2), d.substr(14, 2), d.substr(17, 2));
+                date = t
+                var year = date.getFullYear()
+                var month = (date.getMonth() + 1)
+                date =  year+ ' / '+ month
+                date_sql = '&date='+ date
+            }
+            var url = "archives_messages.html?mailingList=" + mailingList + date_sql +"&sortby="
+            var url_thread = url + "thread"
+            var url_subject = url + "subject"
+            var url_author = url + "sender"
+            var url_date = url + "date"
+
+            var html = "Messages sorted by: " +
+                "<a href='" + url_thread + "' style='padding-left: 1em;'>" + "[ Thread ] " + "</a>" +
+                "<a href='" + url_subject + "' style='padding-left: 1em;'>" + "[ Subject ] " + "</a>" +
+                "<a href='" + url_author + "' style='padding-left: 1em;'>" + "[ Author ] " + "</a>" +
+                "<a href='" + url_date + "' style='padding-left: 1em;'>" + "[ Date ]" + "</a>"
+            return html
+
+        }
+
+        function  get_prev_next_msg_html(message_id, mailingList, sortby, date) {
+            var url = "https://wvpkul46d8.execute-api.us-west-2.amazonaws.com/api/messages" +
+                "?query=recipient:" + mailingList +
+                "&fields=id,parent_id,sender,subject,original_date,date&order=desc&limit=-1&sortby="
+            if(sortby == 'thread') {
+                url += 'parent_id&is_sortby_thread=true'
+            }else{
+                url += sortby
+            }
+
+            if(date != null){
+                d= date
+                t =new Date(d.substr(0, 4), d.substr(5, 2) - 1, d.substr(8, 2), d.substr(11, 2), d.substr(14, 2), d.substr(17, 2));
+                date = t
+                var year = date.getFullYear()
+                var month = (date.getMonth() + 1)
+                url = url + '&query_date=year:' + year +',month:' + month
+            }
+            
+            $.ajax({
+                type: "GET",
+                url: url,
+                crossDomain: true,
+                dataType: "json",
+                success: function (res) {
+                    console.log(res);
+                    if (res == 'undefined') {
+                        $("#result_error").html('Error:' + res)
+                    } else {
+                        if (res.Code === 0) {
+                            var result = res.Result
+                            console.log(result)
+                            $('#messages_count').html('Messages: ' + res.Total)
+                            var prev_message = {
+                                'id': null,
+                                'subject': null
+                            }
+                            var next_message = {
+                                'id': null,
+                                'subject': null
+                            }
+                            for (var i in result) {
+                                var msg = result[i]
+                                if(msg.id == message_id) {
+                                    var prev_msg =  result[i-1]
+                                    if (prev_msg) {
+                                        prev_message = {
+                                            'id': prev_msg.id,
+                                            'subject': prev_msg.subject
+                                        }
+                                    }
+                                    var next_msg =  result[Number(i)+1]
+                                    if (next_msg) {
+                                        next_message = {
+                                            'id': next_msg.id,
+                                            'subject': next_msg.subject
+                                        }
+                                    }
+                                    break;
+                                }
+                            }
+
+                            var html = ""
+                            if (prev_message['id']) {
+                                var url = "archives_messages_detail.html?id=" + prev_message["id"] + "&sortby=" + sortby
+                                html += "Previous message: " +
+                                        "<a href='" + url + "'&mailinglist style='padding-left: 1em;'>" + prev_message["subject"] + "</a><br>"
+                            }
+                            if (next_message['id']) {
+                                var url = "archives_messages_detail.html?id=" + next_message["id"] + "&sortby=" + sortby
+                                html += "Next message: " +
+                                    "<a href='" + url + "&mailinglist' style='padding-left: 1em;'>" + next_message["subject"] + "</a><br>"
+                            }
+                            $("#prev_next_messages").html(html)
+                            $("#prev_next_messages_down").html(html)
+
+                            return html
+                        } else {
+                            $("#result_error").html('Error：<br/>' + res.Error)
+                        }
+                    }
+                },
+                error: function (data, status, error) {
+                    console.log(data);
+                    console.log('fail');
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>

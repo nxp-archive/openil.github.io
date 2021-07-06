@@ -1,0 +1,195 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+#Site Styles
+#Page Styles
+#Media Queries
+#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container, .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container { width: 748px; }
+.menu ul li a.ms_top { padding: 33px 12px 0; }
+.carousel-control { top: 47%; }
+.now_page h4 { font-size: 26px; }
+.navbar .brand { margin-left: 0px; }
+#footer .span4 { width: 229px; }
+#footer input#email { width: 150px; }
+.input-append .subscribe-input { width: 142px; }
+.bricks .span4 { width: 241px; }
+.maps_view { height: 250px; }
+.services .span6, .feed .span6 { margin-left: 0px; width: 374px; }
+#test-carousel .quote { width: 330px; background-size: contain; }
+#test-carousel .quote p { margin: 30px 10px 20px; }
+.comments { margin-left: 74px; }
+.date, .comments { font-size: 9px; }
+.content_full_size .span6 { width: 364px; }
+.span8 { width: 520px; }
+.content_page .span4 { width: 200px; }
+.content_page .span4.gap10 { width: 236px; }
+.offset1 { margin: 0px; }
+.span10 { width: 700px; }
+.span12 { width: 748px; }
+.label-inverse, .badge-inverse { margin-top: 5px; }
+input.span2, textarea.span2, .uneditable-input.span2 { width: 90px; }
+.navbar-inner { padding-right: 0px; }
+.navbar .nav > li > a { padding: 10px 13px; }
+.sliderwrap { width: 768px; }
+#slider-wrapper object { height: 312px; }
+.navbar-fixed-top .navbar-inner { padding: 0px; }
+.content_page .span3 { width: 172px; }
+.feed .row { margin: 0px; }
+}
+
+/* All Mobile Sizes (devices and browser) */
+
+@media only screen and (max-width: 767px) {
+.navbar { height: auto; }
+.navbar .brand { width: 145px; float: none; margin: 0 auto 22px; }
+.navbar-fixed-top, .navbar-fixed-bottom { position: static; }
+.menu .l_tinynav1 { display: none; }
+#footer { height: auto; }
+.cols .lastcol { margin-left: 0px; }
+.menu .tinynav { padding: 4px 0; width: 100%; display: block; }
+.menu { padding-bottom: 7px; float: none; overflow: hidden; height: auto; }
+.category { padding-top: 200px; }
+.equal .offset2, .equal .offset2 { margin-left: 0px !important; }
+.bricks .block:first-child { margin-left: 0px; }
+.services .span6, .feed .span6 { margin: 0px 0 30px; width: 100%; float: none; }
+.row { margin: 0px auto; }
+.span4 .flickr { margin-bottom: 0px; }
+.span4 h4 { margin: 0px; }
+#footer { padding-top: 20px; }
+#footer .cols { height: auto; }
+.navbar-fixed-top .navbar-inner { padding: 0px; }
+.pic:hover { opacity: 1; }
+.pic:hover .zoom { display: none; }
+.span8 { margin: 0px; width: 100%; float: none; overflow: hidden; }
+.border-sep { margin: 40px 0; }
+.pic:hover img { opacity: 1 !important; }
+.content_page .span8 .span4 { margin: 0 10px; float: left; width: 180px; }
+#content.nogap { padding-top: 0px; }
+.content_page .span4 { margin: 0px; width: 100%; float: none; overflow: hidden; }
+.blogpost .post_detail { font-size: 10px; }
+.media, .media-body { overflow: visible; }
+.form-horizontal .control-label { width: 110px; }
+.form-horizontal .controls { margin-left: 130px; }
+.content_page .span3 { margin-left: 10px; width: 190px; min-height: 310px; }
+#catalogue .thumb + div { margin: 0px !important; }
+.category.gap20 { margin: 0 0 0 0px; padding: 20px 0 0 0px; }
+.carousel-control { margin-top: -20px; top: 50%; }
+.news { margin: 0px; }
+.comments { margin-left: 10px; float: left; }
+.quotes { margin-left: 0px; }
+#test-carousel .quote { width: 400px; background-size: contain; }
+#test-carousel .quote p { margin: 30px 10px 20px; }
+.span8.gapfloat { float: none; }
+.pic.pull-left { margin: auto; text-align: center; }
+.pic.pull-right { margin: auto; text-align: center; }
+#header { height: auto; }
+#miscellaneous .span4 { overflow: visible; }
+}
+
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container, .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container { width: 400px; }
+#quote-carousel .item .item-inner { margin-left: -200px; width: 400px; }
+.menu ul li a.ms_top { padding: 30px 12px; }
+.span3.capability { width: 199px; }
+.span3.capability a { font-size: 14px; }
+.span4 { padding-bottom: 15px; margin: 0px; float: none; overflow: hidden; width: 100%; }
+.span4 h4 { margin: 0px 0px; }
+.input-append .subscribe-input { width: 142px; }
+.maps_view { height: 200px; }
+.chatiframe { width: 98% !important; }
+.pic.pull-left { margin: 0 auto 15px; float: none; }
+.pic.pull-right { margin: 0 auto 15px; float: none; }
+.media .pic.pull-left { float: left; margin-right: 20px; }
+.content_full_size .span6 { margin-left: 10px; width: 190px; }
+.offset1 { margin: 0px; }
+.span10 { width: 400px; }
+.span12 { width: 400px; margin: 0px; }
+.well { padding: 10px; }
+.input-medium { width: 123px; }
+.btn { width: 160px; }
+.span4.gap11 { overflow: visible; }
+.form-horizontal.well .control-group label { width: 75px; }
+.form-horizontal.well .controls { margin-left: 85px; }
+.pricing_six .pricing_column, .pricing_six .pricing_column_first { width: 15% !important; }
+.sliderwrap { width: 420px; }
+#slider-wrapper object { height: 235px; }
+#myCarousel .carousel-caption { margin-left: -200px; width: 400px; }
+button.btn[type="reset"] { margin-top: 10px; }
+.label { margin-bottom: 5px; }
+.badge { margin-bottom: 5px; }
+}
+
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
+@media only screen and (max-width: 479px) {
+.navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container, .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container { width: 300px; }
+#quote-carousel .item .item-inner { margin-left: -150px; width: 300px; }
+.span4 { margin: 0px; padding-bottom: 15px; }
+.span4 flickr { margin-bottom: 0px; }
+.content_page .span8 .span4 { margin: 0px; width: 100%; }
+.form-horizontal .control-label { width: 65px; }
+.form-horizontal .controls { margin-left: 70px; }
+h3, h4, h5 { font-size: 13px; }
+.pic.pull-left { margin-right: 10px; }
+.maps_view { height: 180px; }
+.content_full_size .span6 { margin-left: 0px; width: 300px; float: none; overflow: hidden; }
+.content_page .span3 { margin-left: 0px; width: 300px; }
+.pic.pull-left { margin: 0 auto 15px; float: none; }
+.pic.pull-right { margin: 0 auto 15px; float: none; }
+.offset1 { margin: 0px; }
+.span10 { width: 300px; }
+.span12 { width: 300px; margin: 0px; }
+.navbar .nav > li > a { padding: 10px 7px; }
+.offset1 { margin: 0px; }
+.well { padding: 10px; }
+.input-medium { width: 123px; }
+.form-horizontal.well .btn { margin-top: 10px; width: 160px; }
+.span4.gap11 { overflow: visible; }
+.form-horizontal.well .control-group label { width: 200px; float: left; text-align: left; }
+.form-horizontal.well .controls { margin-left: 0px; float: left; width: 250px; }
+.input-xlarge { width: 250px; }
+.form-horizontal .form-actions { padding-left: 0px; }
+.sliderwrap { width: 300px; }
+#slider-wrapper object { height: 165px; }
+.media > .pull-left { width: 110px; }
+.date, .comments { font-size: 9px; }
+.extrabold { font-size: 24px; }
+#test-carousel .quote { width: 300px; background-size: contain; }
+#test-carousel .quote p { margin: 45px 7px 15px; line-height: 24px; }
+.carousel-control1 { top: 97%; }
+.services .service.text-right h4, .services .service.text-right p { margin-left: 0px; }
+.services .service.text-left h4, .services .service.text-left p { margin-right: 0px; }
+#myCarousel .carousel-caption { margin-left: -150px; width: 300px; }
+#myCarousel .carousel-caption h4 { font-size: 50px; }
+.media .pic.pull-left { float: left; margin-right: 0px; }
+button.btn[type="reset"] { margin-top: 10px; }
+.label { margin-bottom: 5px; }
+.badge { margin-bottom: 5px; }
+}
